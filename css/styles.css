@@ -1,4 +1,153 @@
-body {
-  background-color: black;
-  color: lightgray;
+#heading{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 48px;
+    margin: 50px auto;
+    width: 100%;
+}
+
+#heading label{
+    font-size: 28px;
+}
+
+#heading img{
+    margin: 0 10px;
+}
+
+#menuPage{
+    width: 100%;
+}
+
+#menuPL, #menuENG{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 200px;
+}
+
+#menuPL p, #menuENG p{
+    font-size: 32px;
+    margin: 10px;
+}
+
+#menuPL label, #menuENG label{
+    margin: 10px;
+    font-size: 28px;
+}
+
+.subLevel{
+    font-size: 16px;
+}
+
+#startPlay{
+    margin: 50px auto;
+    height: 60px;
+    width: 250px;
+    color: lightgray;
+    background-color: black;
+    font-size: 32px;
+    border: solid 3px;
+    border-radius: 15px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#puzzle {
+    font-size: 32px;
+    text-align: center;
+    margin: 100px 0;
+    letter-spacing: 4px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+#leftSide,
+#rightSide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+}
+
+#image {
+    min-width: 450px;
+    min-height: 280px;
+}
+
+#alphabet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 450px;
+}
+
+.alphabetEndGame {
+    font-size: 48px;
+    align-items: center;
+    text-align: center;
+}
+
+.letter {
+    font-size: 28px;
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    text-align: center;
+    margin: 5px;
+    border: solid 3px;
+    border-radius: 15px;
+    float: left;
+    cursor: pointer;
+}
+
+.letter:hover {
+    background-color: #222222;
+    color: white;
+    border: solid 3px white;
+}
+
+.hitTrue {
+    background-color: #003300;
+    color: #00c000;
+    border: solid 3px #00c000;
+    cursor: default;
+    pointer-events: none;
+}
+
+.hitFalse {
+    background-color: #330000;
+    color: #c00000;
+    border: solid 3px #c00000;
+    cursor: default;
+    pointer-events: none;
+}
+
+#buttons{
+    display: none;
+}
+
+.selectButton {
+    margin: 50px 25px;
+    height: 60px;
+    width: 250px;
+    color: lightgray;
+    background-color: black;
+    font-size: 32px;
+    border: solid 3px;
+    border-radius: 15px;
+}
+
+#difficulty {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 30px;
+    min-width: 450px;
+}
+
+input {
+    margin: 0 10px;
 }

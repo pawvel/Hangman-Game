@@ -1,18 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Hangman - game</title>
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" />
+    <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <script type="text/javascript" src="js/script.js"></script>
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="wrapper">
-      <div id="puzzle"></div>
-      <div id="image"></div>
-      <div id="letters"></div>
+        <div id="menuPage">
+            <div id="heading">
+                <div>
+                    <p>Wisielec</p>
+                    <label><input id="languagePL" type="radio" name="language" onclick="setPLmenu()"><img
+                            src="img/pl.png" alt="PL">Polski</input></label>
+                </div>
+                <div>
+                    <p>||</p>
+                </div>
+                <div>
+                    <p>Hangman</p>
+                    <label><input id="languageENG" type="radio" name="language" onclick="setENGmenu()"><img
+                            src="img/uk.png" alt="UK">English</input></label>
+                </div>
+            </div>
+            <div id="menuPL">
+                <p>Wybierz poziom</p>
+                <label><input id="easyPL" type="radio" name="difficulty">Łatwy <span class="subLevel">(9
+                        błędów)</span></input></label>
+                <label><input id="mediumPL" type="radio" name="difficulty">Średni <span class="subLevel">(6
+                        błędów)</span></input></label>
+                <label><input id="hardPL" type="radio" name="difficulty">Trudny <span class="subLevel">(3
+                        błędy)</span></input></label>
+            </div>
+            <div id="menuENG" style="display: none;">
+                <p>Select level</p>
+                <label><input id="easyENG" type="radio" name="difficulty">Easy <span class="subLevel">(9
+                        mistakes)</span></input></label>
+                <label><input id="mediumENG" type="radio" name="difficulty">Medium <span class="subLevel">(6
+                        mistakes)</span></input></label>
+                <label><input id="hardENG" type="radio" name="difficulty">Hard <span class="subLevel">(3
+                        mistakes)</span></input></label>
+            </div>
+            <button id="startPlay" onclick="startPlay()">Start</button>
+        </div>
+        <div id="gamePage" style="display: none;">
+            <div id="puzzle"></div>
+            <div class="container">
+                <div id="leftSide">
+                    <div id="image"></div>
+                </div>
+                <div id="rightSide">
+                    <div id="alphabet"></div>
+                    <div id="buttons">
+                        <button id="playAgain" class="selectButton" onclick="playAgain()"></button>
+                        <button class="selectButton" onclick="mainMenu()">Menu</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </body>
+</body>
+
 </html>
