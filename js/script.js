@@ -114,7 +114,7 @@ var proverbsPL = [
 ];
 //#endregion
 
-//#region MENU GRY
+//#region   MENU GRY
 
 //  START GRY
 window.onload = loadGame;
@@ -169,7 +169,7 @@ function mainMenu() {
 }
 //#endregion
 
-//#region GRA
+//#region   GRA
 var puzzle = "";
 var blanckPuzzle = "";
 var proverbs = new Array();
@@ -178,23 +178,23 @@ var difficulty = "";
 var maxMistakes = 0;
 var mistakes = 0;
 
-var yesSound = new Audio("../sounds/yes.wav");
-var noSound = new Audio("../sounds/no.wav");
+var yesSound = new Audio("sounds/yes.wav");
+var noSound = new Audio("sounds/no.wav");
 
 //#region  POZIOM TRUDNOŚCI
 function selectedDifficulty() {
     if (document.getElementById("easyPL").checked || document.getElementById("easyENG").checked) {
-        difficulty = "../img/easy";
+        difficulty = "img/easy";
         maxMistakes = 9;
     }
 
     if (document.getElementById("mediumPL").checked || document.getElementById("mediumENG").checked) {
-        difficulty = "../img/medium";
+        difficulty = "img/medium";
         maxMistakes = 6;
     }
 
     if (document.getElementById("hardPL").checked || document.getElementById("hardENG").checked) {
-        difficulty = "../img/hard";
+        difficulty = "img/hard";
         maxMistakes = 3;
     }
 }
